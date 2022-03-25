@@ -6,17 +6,6 @@ function StartClassification(){
 function model_ready(){
     classifier.classify(gotResults);
 }
-
-function gotResults(error,results){
-    console.log("got results");
-    function StartClassification(){
-        navigator.mediaDevices.getUserMedia({audio:true});
-        classifier = ml5.soundClassifier('https://teachablemachine.withgoogle.com/models/e8zedOvPs/model.json',model_ready)
-    }
-    
-    function model_ready(){
-        classifier.classify(gotResults);
-    }
     
     function gotResults(error,results){
         if(error){
